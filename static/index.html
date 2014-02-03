@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hastebin Plus</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="application.min.css"/>
+        <link rel="stylesheet" type="text/css" href="highlight.min.css"/>
+		
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="application.min.js"></script>
+        <script src="highlight.min.js"></script>
+
+        <script type="text/javascript">
+            var app = null;
+            var handlePop = function(evt) {
+                var path = evt.target.location.pathname;
+                if (path === '/') { app.newDocument(true); } else { app.loadDocument(path.substring(1, path.length)); }
+            };
+            setTimeout(function() {
+                window.onpopstate = function(evt) {
+                    try { handlePop(evt); } catch(err) { }
+                };
+            }, 1000);
+            $(function() {
+                app = new haste();
+                handlePop({ target: window });
+            });
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <pre id="code" style="display:none;" tabindex="0"><code></code></pre>
+            <textarea spellcheck="false" style="display:none;"></textarea>
+        </div>
+        <div id="tools">
+            <div class="save function" title="Save [Ctrl + S]"></div>
+            <div class="new function" title="New [Ctrl + N]"></div>
+            <div class="duplicate function" title="Duplicate [Ctrl + D]"></div>
+            <div class="raw function" title="Raw [Ctrl + Shift + R]"></div>
+            <div class="twitter function" title="Tweet [Ctrl + Shift + T]"></div>
+        </div>		
+    </body>
+</html>
