@@ -26,7 +26,7 @@ For a Hastebin Plus Demo click here: http://hastebin-plus.herokuapp.com/.
 ## Settings
 | Key                    | Description                                  | Default value |
 | ---------------------- | -------------------------------------------- | ------------- |
-| `host`                 | The host the server runs on                  | `localhost`   |
+| `host`                 | The host the server runs on                  | `0.0.0.0`     |
 | `port`                 | The port the server runs on                  | `8080`        |
 | `dataPath`             | The directory where all pastes are stored    | `./data`      |
 | `keyLength`            | The length of the pastes' key                | `10`          |
