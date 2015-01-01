@@ -2,8 +2,6 @@
 Hastebin Plus is an open-source Pastebin software written in node.js, which is easily installable in any network.  
 It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanced in matters of **Design, Speed and Simplicity**.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/MarvinMenzerath/HastebinPlus)
-
 ## Features
 * Paste code, logs and ... almost everything!
 * Syntax-Highlighting
@@ -15,6 +13,8 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 For a Hastebin Plus Demo click here: http://hastebin-plus.herokuapp.com/.
 
 ## Installation
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/MarvinMenzerath/HastebinPlus)
+
 1. Install Git and node.js: `sudo apt-get install git nodejs`
 2. Clone this repository: `git clone https://github.com/MarvinMenzerath/HastebinPlus.git hastebin-plus`
 3. Open `config.js` and change the settings (if you want to)
