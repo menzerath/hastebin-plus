@@ -3,9 +3,9 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 
-var winston = require('winston');
+var logger = require('winston');
 var connect = require('connect');
-var connectRoute = require("connect-route");
+var connectRoute = require('connect-route');
 
 var DocumentHandler = require('./lib/document_handler.js');
 
@@ -15,29 +15,14 @@ config.port = process.env.PORT || config.port || 8080;
 config.host = process.env.HOST || config.host || 'localhost';
 
 // Set up the logger
-var logging = [{
-	"level": "verbose",
-	"type": "Console",
-	"colorize": true
-	}];
-
-try {
-	winston.remove(winston.transports.Console);
-} catch(er) { }
-var detail, type;
-for (var i = 0; i < logging.length; i++) {
-    detail = logging[i];
-    type = detail.type;
-    delete detail.type;
-    winston.add(winston.transports[type], detail);
-}
-winston.info("Welcome to Hastebin Plus!");
+logger.remove(logger.transports.Console);
+logger.add(logger.transports.Console, { colorize: true, level: "verbose" });
+logger.info("Welcome to Hastebin Plus!");
 
 // build the store from the config on-demand - so that we don't load it for statics
-var Store, preferredStore;
-Store = require('./lib/store_file.js');
-preferredStore = new Store(config.dataPath);
-winston.info('Path to data: ' + config.dataPath);
+var Store = require('./lib/store_file.js');
+var preferredStore = new Store(config.dataPath);
+logger.info('Path to data: ' + config.dataPath);
 
 // Compress the static assets
 if (config.compressStaticAssets) {
@@ -50,8 +35,8 @@ if (config.compressStaticAssets) {
     if ((item.indexOf('.css') === item.length - 4) && (item.indexOf('.min.css') === -1)) {
       dest = item.substring(0, item.length - 4) + '.min' + item.substring(item.length - 4);
       var sourceFile = fs.readFileSync('./static/' + item, 'utf8');
-      fs.writeFileSync('./static/' + dest, new CleanCSS().minify(sourceFile), 'utf8');
-      winston.info('Compressed: ' + item + ' ==> ' + dest);
+      fs.writeFileSync('./static/' + dest, new CleanCSS().minify(sourceFile).styles, 'utf8');
+      logger.info('Compressed: ' + item + ' ==> ' + dest);
     }
   }
   
@@ -64,7 +49,7 @@ if (config.compressStaticAssets) {
     if ((item.indexOf('.js') === item.length - 3) && (item.indexOf('.min.js') === -1)) {
       dest = item.substring(0, item.length - 3) + '.min' + item.substring(item.length - 3);
       fs.writeFileSync('./static/' + dest, UglifyJS.minify('./static/' + item).code, 'utf8');
-      winston.info('Compressed: ' + item + ' ==> ' + dest);
+      logger.info('Compressed: ' + item + ' ==> ' + dest);
     }
   }
 }
@@ -74,11 +59,11 @@ var path, data;
 for (var name in config.documents) {
   path = config.documents[name];
   data = fs.readFileSync(path, 'utf8');
-  winston.info('Loading static document: ' + name + " ==> " + path);
+  logger.info('Loading static document: ' + name + " ==> " + path);
   if (data) {
       preferredStore.set(name, data, function(cb) {}, true);
   } else {
-    winston.warn('Failed to load static document: ' + name + " ==> " + path);
+    logger.warn('Failed to load static document: ' + name + " ==> " + path);
   }
 }
 
@@ -125,4 +110,4 @@ connect.createServer(
   connect.static(__dirname + '/static', { maxAge: config.staticMaxAge })
 ).listen(config.port, config.host);
 
-winston.info('Done! Listening on ' + config.host + ':' + config.port);
+logger.info('Done! Listening on ' + config.host + ':' + config.port);
