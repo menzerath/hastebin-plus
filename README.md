@@ -9,9 +9,6 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 * Duplicate & Tweet pastes
 * Raw paste-view
 
-## Demo
-For a Hastebin Plus Demo click here: http://hastebin-plus.herokuapp.com/.
-
 ## Installation
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/MarvinMenzerath/HastebinPlus)
 
