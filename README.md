@@ -14,7 +14,7 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 
 1. Install Git and node.js: `sudo apt-get install git nodejs`
 2. Clone this repository: `git clone https://github.com/MarvinMenzerath/HastebinPlus.git hastebin-plus`
-3. Open `config.js` and change the settings (if you want to)
+3. Open `config.json` and change the settings (if you want to)
 4. Install dependencies: `npm install`
 5. Start the application: `npm start`
 

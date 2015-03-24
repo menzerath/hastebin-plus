@@ -1,5 +1,12 @@
+# IDE
+.idea
+HastebinPlus.iml
+
+# Application
 data
 node_modules
 *.min.css
 *.min.js
+
+# NodeJS
 npm-debug.log
