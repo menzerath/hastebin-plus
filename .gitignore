@@ -1,6 +1,14 @@
-# IDE
+# IDE (IntelliJ IDEA)
 .idea
-HastebinPlus.iml
+UpAndRunning.iml
+
+# IDE (Microsoft Visual Studio)
+obj/
+Microsoft.NodejsTools.WebRole.dll
+.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.suo
 
 # Application
 data
