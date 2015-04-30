@@ -1,101 +1,141 @@
 html {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    background: #002B36;
-    height: 90%;
-    margin: 0;    
+	background: #002B36;
+	height: 90%;
+	margin: 0;
 	padding: 1em;
 }
 
 #content {
-    height: 100%;
-    padding: 0;
+	height: 100%;
+	padding: 0;
 }
 
 textarea {
-    background: transparent;
-    border: 0;
-    color: #fff;
-    font-family: monospace;
-    font-size: 1em;
-    height: 100%;
-    outline: none;
-    padding: 0;
-    resize: none;
-    width: 100%;
+	background: transparent;
+	border: 0;
+	color: #fff;
+	font-family: monospace;
+	font-size: 1em;
+	height: 100%;
+	outline: none;
+	padding: 0;
+	resize: none;
+	width: 100%;
 }
 
 #code {
-    border: 0;
-    font-size: 1em;
-    margin: 0;
-    outline: none;
-    padding: 0 0 4em 0;
-    white-space: pre-wrap;
+	border: 0;
+	font-size: 1em;
+	margin: 0;
+	outline: none;
+	padding: 0 0 4em 0;
+	white-space: pre-wrap;
 }
 
 #code code {
-    background: transparent !important;
-    padding: 0;
+	background: transparent !important;
+	padding: 0;
 }
 
 pre {
-    counter-reset: line-numbering;
+	counter-reset: line-numbering;
 }
 
 pre .line::before {
-    color: #4c6a71;  
-    content: counter(line-numbering);
-    counter-increment: line-numbering;
-    display: inline-block;
-    padding-right: 1em;
-    text-align: right;
-    width: 1.5em !important;
+	color: #4c6a71;
+	content: counter(line-numbering);
+	counter-increment: line-numbering;
+	display: inline-block;
+	padding-right: 1em;
+	text-align: right;
+	width: 1.5em !important;
 }
 
 #tools {
 	background: #08323c;
-    bottom: 0;
+	bottom: 0;
 	font-size: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
+	left: 0;
+	position: fixed;
+	width: 100%;
 }
 
 #tools .function {
-    background: url(function-icons.png);
-    display: inline-block;
-    height: 37px;
-    position: relative;
-    width: 32px;
+	background: url(function-icons.png);
+	display: inline-block;
+	height: 37px;
+	position: relative;
+	width: 32px;
 }
 
 #tools .link embed {
-    vertical-align: bottom;
+	vertical-align: bottom;
 }
 
 #tools .function.enabled:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
-#tools .function.save { background-position: -5px top; }
-#tools .function.enabled.save { background-position: -5px center; }
-#tools .function.enabled.save:hover { background-position: -5px bottom; }
+#tools .function.save {
+	background-position: -5px top;
+}
 
-#tools .function.new { background-position: -42px top; }
-#tools .function.enabled.new { background-position: -42px center; }
-#tools .function.enabled.new:hover { background-position: -42px bottom; }
+#tools .function.enabled.save {
+	background-position: -5px center;
+}
 
-#tools .function.duplicate { background-position: -79px top; }
-#tools .function.enabled.duplicate { background-position: -79px center; }
-#tools .function.enabled.duplicate:hover { background-position: -79px bottom; }
+#tools .function.enabled.save:hover {
+	background-position: -5px bottom;
+}
 
-#tools .function.raw { background-position: -116px top; }
-#tools .function.enabled.raw { background-position: -116px center; }
-#tools .function.enabled.raw:hover { background-position: -116px bottom; }
+#tools .function.new {
+	background-position: -42px top;
+}
 
-#tools .function.twitter { background-position: -153px top; }
-#tools .function.enabled.twitter { background-position: -153px center; }
-#tools .function.enabled.twitter:hover { background-position: -153px bottom; }
+#tools .function.enabled.new {
+	background-position: -42px center;
+}
+
+#tools .function.enabled.new:hover {
+	background-position: -42px bottom;
+}
+
+#tools .function.duplicate {
+	background-position: -79px top;
+}
+
+#tools .function.enabled.duplicate {
+	background-position: -79px center;
+}
+
+#tools .function.enabled.duplicate:hover {
+	background-position: -79px bottom;
+}
+
+#tools .function.raw {
+	background-position: -116px top;
+}
+
+#tools .function.enabled.raw {
+	background-position: -116px center;
+}
+
+#tools .function.enabled.raw:hover {
+	background-position: -116px bottom;
+}
+
+#tools .function.twitter {
+	background-position: -153px top;
+}
+
+#tools .function.enabled.twitter {
+	background-position: -153px center;
+}
+
+#tools .function.enabled.twitter:hover {
+	background-position: -153px bottom;
+}

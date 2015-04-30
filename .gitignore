@@ -1,6 +1,6 @@
 # IDE (IntelliJ IDEA)
 .idea
-UpAndRunning.iml
+HastebinPlus.iml
 
 # IDE (Microsoft Visual Studio)
 obj/
