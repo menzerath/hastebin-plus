@@ -89,7 +89,7 @@ haste.prototype.lockDocument = function() {
 			window.history.pushState(null, _this.appName + '-' + ret.key, file);
 			_this.fullKey();
 			_this.$textarea.val('').hide();
-			_this.$box.show().focus();
+			_this.$box.show();
 		}
 	});
 };
