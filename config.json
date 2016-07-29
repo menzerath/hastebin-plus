@@ -4,7 +4,6 @@
 	"dataPath": "./data",
 	"keyLength": 10,
 	"maxLength": 500000,
-	"compressStaticAssets": true,
 	"documents": {
 		"about": "./README.md",
 		"javaTest": "./documents/test.java"

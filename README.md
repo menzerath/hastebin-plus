@@ -30,7 +30,6 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 | `dataPath`             | The directory where all pastes are stored    | `./data`      |
 | `keyLength`            | The length of the pastes' key                | `10`          |
 | `maxLength`            | Maximum chars in a paste                     | `500000`      |
-| `compressStaticAssets` | Whether or not to compile static js assets   | `true`        |
 | `documents`            | Static documents to serve; will never expire | See below     |
 
 ### Default Config
@@ -41,7 +40,6 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 	"dataPath": "./data",
 	"keyLength": 10,
 	"maxLength": 500000,
-	"compressStaticAssets": true,
 	"documents": {
 		"about": "./README.md",
 		"javaTest": "./documents/test.java"
