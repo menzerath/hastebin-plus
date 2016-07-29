@@ -237,10 +237,10 @@ haste_document.prototype.save = function(data, callback) {
 // after page is loaded
 $(function() {
 	$('textarea').keydown(function(evt) {
-		// allow usage of real tabs
+		// allow usage of tabs
 		if (evt.keyCode === 9) {
 			evt.preventDefault();
-			var myValue = '\t';
+			var myValue = '    ';
 			if (document.selection) {
 				this.focus();
 				sel = document.selection.createRange();

@@ -50,9 +50,16 @@ pre .line::before {
 	content: counter(line-numbering);
 	counter-increment: line-numbering;
 	display: inline-block;
-	padding-right: 1em;
+	margin-right: 1em;
 	text-align: right;
 	width: 1.5em !important;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #tools {
