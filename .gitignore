@@ -15,6 +15,7 @@ data
 node_modules
 *.min.css
 *.min.js
+!jquery.min.js
 
 # NodeJS
 npm-debug.log
