@@ -1,8 +1,8 @@
 {
 	"name": "hastebin-plus",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"private": true,
-	"description": "Open-Source Pastebin Software, based on haste",
+	"description": "Hastebin Plus is an open-source Pastebin software written in node.js.",
 	"keywords": [
 		"paste",
 		"pastebin",

@@ -6,7 +6,7 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 * Paste code, logs and ... almost everything!
 * Syntax-Highlighting
 * Add static documents
-* Duplicate & Tweet pastes
+* Duplicate & edit pastes
 * Raw paste-view
 
 ## Installation
