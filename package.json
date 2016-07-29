@@ -13,18 +13,17 @@
 	],
 	"author": {
 		"name": "Marvin Menzerath",
-		"email": "marvin@menzerath.eu",
-		"url": "https://menzerath.eu/"
+		"email": "github@marvin-menzerath.de",
+		"url": "https://marvin-menzerath.de/"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"clean-css": "~3.2.6",
-		"connect": "~2.20.2",
-		"connect-route": "~0.1.5",
-		"uglify-js": "~2.4.20",
-		"winston": "~1.0.0"
+		"clean-css": "~3.4.19",
+		"express": "~4.14.0",
+		"uglify-js": "~2.7.0",
+		"winston": "~2.2.0"
 	},
 	"scripts": {
-		"start": "node server.js"
+		"start": "node ./server.js"
 	}
 }

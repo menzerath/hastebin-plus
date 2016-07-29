@@ -5,7 +5,11 @@
 	"logo": "https://raw.githubusercontent.com/MarvinMenzerath/HastebinPlus/master/static/favicon.png",
 	"keywords": [
 		"node",
+		"paste",
+		"pastebin",
 		"haste",
-		"hastebin"
+		"hastebin",
+		"code",
+		"syntax highlighting"
 	]
 }

@@ -30,24 +30,22 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 | `dataPath`             | The directory where all pastes are stored    | `./data`      |
 | `keyLength`            | The length of the pastes' key                | `10`          |
 | `maxLength`            | Maximum chars in a paste                     | `500000`      |
-| `staticMaxAge`         | Max age for static assets                    | `86400`       |
 | `compressStaticAssets` | Whether or not to compile static js assets   | `true`        |
 | `documents`            | Static documents to serve; will never expire | See below     |
 
 ### Default Config
 ```json
 {
-    "host": "0.0.0.0",
-    "port": 8080,
-    "dataPath": "./data",
-    "keyLength": 10,
-    "maxLength": 500000,
-    "staticMaxAge": 86400,
-    "compressStaticAssets": true,
-    "documents": {
-        "about": "./README.md",
-        "javaTest": "./documents/test.java"
-    }
+	"host": "0.0.0.0",
+	"port": 8080,
+	"dataPath": "./data",
+	"keyLength": 10,
+	"maxLength": 500000,
+	"compressStaticAssets": true,
+	"documents": {
+		"about": "./README.md",
+		"javaTest": "./documents/test.java"
+	}
 }
 ```
 
@@ -58,7 +56,7 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 * [Application Icon](https://www.iconfinder.com/icons/285631/notepad_icon): [Paomedia](https://www.iconfinder.com/paomedia) - [CC BY 3.0 License](http://creativecommons.org/licenses/by/3.0/)
 
 ## License
-Copyright (c) 2014-2015 Marvin Menzerath
+Copyright (c) 2014-2016 Marvin Menzerath
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
