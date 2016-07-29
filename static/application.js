@@ -62,7 +62,7 @@ haste.prototype.loadDocument = function(key) {
 			_this.setTitle(ret.key);
 			_this.fullKey();
 			_this.$textarea.val('').hide();
-			_this.$box.show().focus();
+			_this.$box.show();
 		} else {
 			_this.newDocument();
 		}
