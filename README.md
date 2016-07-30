@@ -23,14 +23,15 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 2. Install new dependencies: `npm install`
 
 ## Settings
-| Key                    | Description                                  | Default value |
-| ---------------------- | -------------------------------------------- | ------------- |
-| `host`                 | The host the server runs on                  | `0.0.0.0`     |
-| `port`                 | The port the server runs on                  | `8080`        |
-| `dataPath`             | The directory where all pastes are stored    | `./data`      |
-| `keyLength`            | The length of the pastes' key                | `10`          |
-| `maxLength`            | Maximum chars in a paste                     | `500000`      |
-| `documents`            | Static documents to serve; will never expire | See below     |
+| Key                    | Description                                     | Default value |
+| ---------------------- | ----------------------------------------------- | ------------- |
+| `host`                 | The host the server runs on                     | `0.0.0.0`     |
+| `port`                 | The port the server runs on                     | `8080`        |
+| `dataPath`             | The directory where all pastes are stored       | `./data`      |
+| `keyLength`            | The length of the pastes' key                   | `10`          |
+| `maxLength`            | Maximum chars in a paste                        | `500000`      |
+| `createKey`            | Needs to be in front of paste to allow creation | ` `            |
+| `documents`            | Static documents to serve                       | See below     |
 
 ### Default Config
 ```json
@@ -40,6 +41,7 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 	"dataPath": "./data",
 	"keyLength": 10,
 	"maxLength": 500000,
+	"createKey": "",
 	"documents": {
 		"about": "./README.md",
 		"javaTest": "./documents/test.java"

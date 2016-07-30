@@ -216,13 +216,7 @@ haste_document.prototype.save = function(data, callback) {
 		dataType: 'json',
 		contentType: 'application/json; charset=utf-8',
 		success: function(res) {
-			_this.locked = true;
-			_this.key = res.key;
-			var high = hljs.highlightAuto(data).value;
-			callback(null, {
-				key: res.key,
-				value: high,
-			});
+			new haste().loadDocument(res.key);
 		},
 		error: function(res) {
 			try {

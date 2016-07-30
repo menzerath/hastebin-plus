@@ -37,7 +37,8 @@ for (var name in config.documents) {
 var documentHandler = new DocumentHandler({
 	store: fileStorage,
 	maxLength: config.maxLength,
-	keyLength: config.keyLength
+	keyLength: config.keyLength,
+	createKey: config.createKey
 });
 
 // compress static assets
