@@ -60,6 +60,7 @@ haste.prototype.loadDocument = function(key) {
 		if (ret) {
 			_this.$code.html(ret.value);
 			_this.setTitle(ret.key);
+			window.history.pushState(null, _this.appName + '-' + ret.key, '/' + ret.key);
 			_this.fullKey();
 			_this.$textarea.val('').hide();
 			_this.$box.show();
@@ -85,8 +86,7 @@ haste.prototype.lockDocument = function() {
 		if (!err && ret) {
 			_this.$code.html(ret.value.trim().replace(/.+/g, "<span class=\"line\">$&</span>").replace(/^\s*[\r\n]/gm, "<span class=\"line\"></span>\n"));
 			_this.setTitle(ret.key);
-			var file = '/' + ret.key;
-			window.history.pushState(null, _this.appName + '-' + ret.key, file);
+			window.history.pushState(null, _this.appName + '-' + ret.key, '/' + ret.key);
 			_this.fullKey();
 			_this.$textarea.val('').hide();
 			_this.$box.show();

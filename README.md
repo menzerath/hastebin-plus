@@ -30,7 +30,7 @@ It bases upon [haste](https://github.com/seejohnrun/haste-server) and got enhanc
 | `dataPath`             | The directory where all pastes are stored       | `./data`      |
 | `keyLength`            | The length of the pastes' key                   | `10`          |
 | `maxLength`            | Maximum chars in a paste                        | `500000`      |
-| `createKey`            | Needs to be in front of paste to allow creation | ` `            |
+| `createKey`            | Needs to be in front of paste to allow creation | ` `           |
 | `documents`            | Static documents to serve                       | See below     |
 
 ### Default Config
